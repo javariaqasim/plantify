@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "196513705447",
+    "firebase_url": "https://react-native-4c552-default-rtdb.firebaseio.com",
+    "project_id": "react-native-4c552",
+    "storage_bucket": "react-native-4c552.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196513705447:android:ce3a14a516ae12f218e142",
+        "android_client_info": {
+          "package_name": "com.boilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196513705447-7pbf0g4b61n128jvnjh7jj42fo9qp0pm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX2PYbRkDGltS8EesRzfXqa7Q8K0ayWo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196513705447-7pbf0g4b61n128jvnjh7jj42fo9qp0pm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196513705447:android:a404e9a2530c62b818e142",
+        "android_client_info": {
+          "package_name": "com.pizzaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196513705447-7pbf0g4b61n128jvnjh7jj42fo9qp0pm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX2PYbRkDGltS8EesRzfXqa7Q8K0ayWo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196513705447-7pbf0g4b61n128jvnjh7jj42fo9qp0pm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
