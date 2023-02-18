@@ -13,7 +13,7 @@ function SingleProduct({navigation, route}) {
   let obj = route.params;
 
   const handleAddToWishlist = (productId) => {
-    axios.post('https://long-cyan-dalmatian-hem.cyclic.app/wishlist', { productId })
+    axios.post('https://lonely-blue-seal.cyclic.app/wishlist', { productId })
       .then(response => {
         const newWishlistItem = response.data;
         setWishlistItems([...wishlistItems, newWishlistItem]);

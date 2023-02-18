@@ -22,7 +22,7 @@ const handleSignUp = async () => {
   }
 
   try {
-    const response = await axios.post('https://long-cyan-dalmatian-hem.cyclic.app/api/signup', {
+    const response = await axios.post('https://lonely-blue-seal.cyclic.app/api/signup', {
       firstname,
       lastname,
       email,

@@ -19,7 +19,7 @@ function Login({ navigation }) {
       }
   
       try {
-        const response = await axios.post('https://long-cyan-dalmatian-hem.cyclic.app/api/login', {
+        const response = await axios.post('https://lonely-blue-seal.cyclic.app/api/login', {
           email,
           password
         });

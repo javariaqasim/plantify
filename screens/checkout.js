@@ -16,7 +16,7 @@ function Checkout({navigation, route}) {
   // }, []);
 
   const handleDeleteCartItem = (id) => {
-    axios.delete(`https://long-cyan-dalmatian-hem.cyclic.app/api/cards/${id}`)
+    axios.delete(`https://lonely-blue-seal.cyclic.app/api/cards/${id}`)
       .then(response => {
         const updatedCardsItems = CardsItems.filter(item => item._id !== id);
         setCardsItems(updatedCardsItems);

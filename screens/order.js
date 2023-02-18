@@ -8,42 +8,33 @@ import logo from '../images/logo.png'
 
 
  function Order() {
-  const [orders, setOrders] = useState([]);
+
+
   const [customerName, setCustomerName] = useState('');
   const [productName, setProductName] = useState('');
   const [price, setPrice] = useState('');
   const [address, setAddress] = useState('');
   const [quantity, setQuantity] = useState('');
 
-  // useEffect(() => {
-  //   fetch('https://long-cyan-dalmatian-hem.cyclic.app/orders')
-  //     .then(res => res.json())
-  //     .then(data => setOrders(data))
-  //     .catch(err => console.error(err));
-  // }, []);
+  const handleCreateOrder = ({ navigation }) => {
+    const data = {
+      customerName: customerName,
+      productName: productName,
+      price: price,
+      address: address,
+      quantity: quantity
+    };
 
-  const handleSubmit = () => {
-    const order = { customerName, productName, price, address, quantity };
-
-    fetch('https://long-cyan-dalmatian-hem.cyclic.app/orders', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(order)
-    })
-      .then(res => res.json())
-      .then(data => {
-        setOrders([...orders, data]);
-        setCustomerName('');
-        setProductName('');
-        setPrice('');
-        setAddress('');
-        setQuantity('');
+    axios.post('https://lonely-blue-seal.cyclic.app/api/orders')
+      .then(response => {
+        console.log(response.data); // the created order object from the server
       })
-      .catch(err => console.error(err));
+      .catch(error => {
+        console.error(error);
+      });
   };
+
   return (
-
-
 
     <View style={[styles.h100, {background: "#FFFFFF"}]}>
 
@@ -56,43 +47,36 @@ import logo from '../images/logo.png'
     top: 10
     }}
 />
-
 </View>
-<Text style={[styles.textBold,{color: "#0D986A", fontSize: 30, top: 8,left: 24,fontSize: 36}]}>Order</Text>
-{orders.map(order => (
-        <Text key={order._id}>
-          {order.customerName} ordered {order.productName} for ${order.price}
-        </Text>
-      ))}
+<View style={styles.p2}>
+          <Text style={[styles.fs2, styles.textBold, {color: "green"}]}>Order Form</Text>
+        </View>
 
-
-
-<View style={{top: 15}}>
+<View>
 <View style={[styles.p2, styles.w100]}>
       <SMTextField  label="Customer Name"
-        value={customerName}
-        onChangeText={text => setCustomerName(text)} />
+       value={customerName} onChangeText={setCustomerName} />
       </View>
       <View style={[styles.p2, styles.w100]}>
-      <SMTextField   label="Product Name" value={productName} onChangeText={text => setProductName(text)} />
+      <SMTextField   label="Product Name"  value={productName} onChangeText={setProductName} />
       </View>
       <View style={[styles.p2, styles.w100]}>
       <SMTextField label="Price"
-        value={price} onChangeText={text => setPrice(text)} keyboardType="numeric" />
+        value={price} onChangeText={setPrice} />
       </View>
-
+      
      
   
       <View style={[styles.p2, styles.w100]}>
-      <SMTextField label="Address" value={address} onChangeText={text => setAddress(text)} />
+      <SMTextField label="Address" value={address} onChangeText={setAddress} />
       </View>
 
       <View style={[styles.p2, styles.w100]}>
-      <SMTextField label="Quantity" value={address} onChangeText={text => setQuantity(text)} />
+      <SMTextField label="Quantity" value={quantity} onChangeText={setQuantity} />
       </View>
  
       <View style={[styles.p2, styles.w100]}>
-      <SMButton label="Confirm"  onPress={handleSubmit} />
+      <SMButton label="Confirm"  onPress={handleCreateOrder} />
       </View>
   
     </View>

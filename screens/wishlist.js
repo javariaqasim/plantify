@@ -7,13 +7,13 @@ const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
 
   useEffect(() => {
-    axios.get('https://long-cyan-dalmatian-hem.cyclic.app/wishlist')
+    axios.get('https://lonely-blue-seal.cyclic.app/wishlist')
       .then(response => setWishlistItems(response.data))
       .catch(error => console.log(error));
   }, []);
 
   // const handleAddToWishlist = (productId) => {
-  //   axios.post('https://long-cyan-dalmatian-hem.cyclic.app/wishlist', { productId })
+  //   axios.post('https://lonely-blue-seal.cyclic.app/wishlist', { productId })
   //     .then(response => {
   //       const newWishlistItem = response.data;
   //       setWishlistItems([...wishlistItems, newWishlistItem]);

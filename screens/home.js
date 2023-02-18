@@ -23,7 +23,7 @@ function Home({navigation}) {
   
   const search = async () => {
     try {
-      const response = await fetch(`https://long-cyan-dalmatian-hem.cyclic.app/search?term=${searchTerm}`);
+      const response = await fetch(`https://lonely-blue-seal.cyclic.app/search?term=${searchTerm}`);
       const json = await response.json();
       if (json.success) {
         setSearchResults(json.items);
@@ -35,7 +35,7 @@ function Home({navigation}) {
 
 
   let getData = () => {
-    let api = 'https://long-cyan-dalmatian-hem.cyclic.app/api/cards';
+    let api = 'https://lonely-blue-seal.cyclic.app/api/cards';
     axios
       .get(api)
       .then(res => {
